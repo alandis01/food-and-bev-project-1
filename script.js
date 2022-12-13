@@ -1,6 +1,46 @@
 var searchButtonEl = document.querySelector('#searchButton');
 var userSelectEl = document.querySelectorAll('.form-check-input');
+var resultsEl = document.querySelector("#results");
 
+var displayFunction = function(){
+  resultsEl.innerHTML = null;
+
+for (var result of results){
+
+  var cardEl = document.createElement("div");
+  cardEl.className = "card m-3";
+
+  var cardTitleEl = document.createElement("h5");
+  cardTitleEl.className = "card-title";
+  cardTitleEl.textContent = result.title;
+
+  var cardBodyEl = document.createElement('div');
+  cardBodyEl.className = "card-body";
+
+  var cardLink = document.createElement("a");
+  cardLink.className = "card-link";
+
+  caredLink.textContent = result.url;
+  cardLink.href = result.url;
+  cardLink.target = "_blank";
+
+  resultsEl.appendChild(cardEl);
+  cardEl.appendChild(cardBodyEl);
+  cardBodyEl.append(cardTitleEl, cardLink);
+
+}
+};
+
+// <!-- <div class="card" style="width: 18rem;">
+// <img src="..." class="card-img-top" alt="...">
+// <div class="card-body">
+//     <h5 class="card-title">Card title</h5>
+//     <p class="card-text">Some quick example text to build on the card title and make up the
+//         bulk
+//         of the card's content.</p>
+//     <a href="#" class="btn btn-primary">Go somewhere</a>
+// </div>
+// </div>
 
 
 function foodApi(q){
@@ -14,6 +54,7 @@ function foodApi(q){
     .then(function (data) {
       console.log(data);
       // bevApi(data);
+      displayFunction(data.meals);
     })
     .catch(function (error) {
       console.log(error);
@@ -31,6 +72,7 @@ function foodApi(q){
         .then(function(data2){
             // console.log(data1);
             console.log(data2);
+            displayFunction(data.drinks);
         })
         .catch(function (error) {
             console.log(error);
