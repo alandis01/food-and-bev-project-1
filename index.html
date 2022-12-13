@@ -18,53 +18,62 @@
                 Pick an ingredient, we'll fetch a food and drink!
             </h3>
         </div>
-        <section class="p-3 d-flex justify-content-center" id="userSelect">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="brandy" id="brandy" value="brandy">
-                <label class="form-check-label">Brandy</label>
+        <section class="container p-3 d-flex justify-content-center" id="userSelect">
+            <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="brandy" id="brandy" value="brandy">
+                        <label class="form-check-label">Brandy</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="ginger" id="ginger" value="ginger">
+                        <label class="form-check-label">Ginger</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="lemon" id="lemon" value="lemon">
+                        <label class="form-check-label">Lemon</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="lime" id="lime" value="lime">
+                        <label class="form-check-label">Lime</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="milk" id="milk" value="milk">
+                        <label class="form-check-label">Milk</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="orange" id="orange" value="orange">
+                        <label class="form-check-label">Orange</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="strawberries" id="strawberries"
+                            value="strawberries">
+                        <label class="form-check-label">Strawberries</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sugar" id="sugar" value="sugar">
+                        <label class="form-check-label">Sugar</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="egg" id="egg" value="egg">
+                        <label class="form-check-label">Egg</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="sherry" id="sherry" value="sherry">
+                        <label class="form-check-label">Sherry</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="cider" id="cider" value="cider">
+                        <label class="form-check-label">Cider</label>
+                    </div>
+                </div>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="ginger" id="ginger" value="ginger">
-                <label class="form-check-label">Ginger</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="lemon" id="lemon" value="lemon">
-                <label class="form-check-label">Lemon</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="lime" id="lime" value="lime">
-                <label class="form-check-label">Lime</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="milk" id="milk" value="milk">
-                <label class="form-check-label">Milk</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="orange" id="orange" value="orange">
-                <label class="form-check-label">Orange</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="strawberries" id="strawberries" value="strawberries">
-                <label class="form-check-label">Strawberries</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="sugar" id="sugar" value="sugar">
-                <label class="form-check-label">Sugar</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="egg" id="egg" value="egg">
-                <label class="form-check-label">Egg</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="sherry" id="sherry" value="sherry">
-                <label class="form-check-label">Sherry</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="cider" id="cider" value="cider">
-                <label class="form-check-label">Cider</label>
             </div>
         </section>
-        <button type="button" class="btn btn-danger" id="searchButton">Search</button>
+        <div class="p-3 d-flex justify-content-center">
+            <button type="button" class="btn btn-danger" id="searchButton">Search</button>
+        </div>
 
         <div class="container px-4 text-center">
             <div class="row gx-5">
@@ -76,16 +85,6 @@
                 </div>
                 <div class="col-6">
                     <section class="p-3 border bg-light">Beverages
-                        <!-- <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div> -->
                         <div id="results"> </div>
                     </section>
                 </div>

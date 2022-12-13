@@ -107,12 +107,16 @@ function foodApi(q){
   var handleSearch = function (event){
     event.preventDefault();
 
+
     var q;
     for (var i = 0; i < userSelectEl.length; i++){
       if(userSelectEl[i].checked){
         q = userSelectEl[i].value;
         userSelectEl[i].checked = false;
       }
+      var selectedIngredient = document.createElement ("h4");
+        selectedIngredient.className = "";
+        selectedIngredient.textContent = q;
     }
     
     console.log(q);
