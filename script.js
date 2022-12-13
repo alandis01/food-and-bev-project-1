@@ -1,36 +1,35 @@
-// http://www.thecocktaildb.com/api/json/v1/1/search.php?i= + q
-// http://www.themealdb.com/api/json/v1/1/filter.php?i= + q
 var searchButtonEl = document.querySelector('#searchButton');
-var userSelectEl = document.querySelector('#userSelect');
+var userSelectEl = document.querySelectorAll('.form-check-input');
 
 
-function foodApi(event){
-    var foodUrl= "http://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast";
+
+function foodApi(q){
+    var foodUrl= "https://www.themealdb.com/api/json/v1/1/filter.php?i=" + q ;
     
-    event.preventDefault();
     
     fetch(foodUrl)
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
-        bevApi(data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-}
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      // bevApi(data);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+  
 
-
-  function bevApi(data1){
-    var bevUrl = "http://www.thecocktaildb.com/api/json/v1/1/search.php?i=vodka";
+  function bevApi(q){
+    var bevUrl = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + q;
+    
     fetch(bevUrl)
         .then(function(response){
             return response.json();
         })
         .then(function(data2){
-            console.log(data1);
+            // console.log(data1);
             console.log(data2);
         })
         .catch(function (error) {
@@ -38,4 +37,24 @@ function foodApi(event){
         });
   }
 
-  searchButtonEl.addEventListener('click', foodApi);
+
+  var handleSearch = function (event){
+    event.preventDefault();
+
+    var q;
+    for (var i = 0; i < userSelectEl.length; i++){
+      if(userSelectEl[i].checked){
+        q = userSelectEl[i].value;
+      }
+    }
+    
+    console.log(q);
+    
+    //if a search exists, only then should the function fetch results
+    if (q) {
+        foodApi(q);
+        bevApi(q);
+    }
+};
+
+  searchButtonEl.addEventListener('click', handleSearch);
