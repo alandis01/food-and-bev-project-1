@@ -33,8 +33,7 @@ var displayMeals = function(meals){
   foodResultsEl.innerHTML = null;
 
   for (var meal of meals){
-//for (var i = 0; i < drinks.length; i++) {
-//  var drink = drinks[i];
+
     var cardEl = document.createElement("div");
     cardEl.className = "card m-3";
   
@@ -57,17 +56,6 @@ var displayMeals = function(meals){
 
 };
 
-// <!-- <div class="card" style="width: 18rem;">
-// <img src="..." class="card-img-top" alt="...">
-// <div class="card-body">
-//     <h5 class="card-title">Card title</h5>
-//     <p class="card-text">Some quick example text to build on the card title and make up the
-//         bulk
-//         of the card's content.</p>
-//     <a href="#" class="btn btn-primary">Go somewhere</a>
-// </div>
-// </div>
-
 
 function foodApi(q){
     var foodUrl= "https://www.themealdb.com/api/json/v1/1/filter.php?i=" + q ;
@@ -78,7 +66,6 @@ function foodApi(q){
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
       displayMeals(data.meals);
     })
     .catch(function (error) {
@@ -95,7 +82,6 @@ function foodApi(q){
             return response.json();
         })
         .then(function(data){
-            console.log(data);
             displayDrinks(data.drinks);
         })
         .catch(function (error) {
@@ -119,13 +105,12 @@ function foodApi(q){
         selectedIngredient.textContent = q;
     }
     
-    console.log(q);
-    
     //if a search exists, only then should the function fetch results
     if (q) {
         foodApi(q);
         bevApi(q);
     }
+    localStorage.setItem('user selection', q);
 };
 
   searchButtonEl.addEventListener('click', handleSearch);
