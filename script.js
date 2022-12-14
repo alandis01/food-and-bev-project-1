@@ -43,7 +43,7 @@ var displayMeals = function(meals){
     cardTitleEl.textContent = meal.strMeal;
   
     var cardBodyEl = document.createElement('div');
-    cardBodyEl.className = "card-body card-background";
+    cardBodyEl.className = "card-body";
   
     var cardImg = document.createElement("img");
     cardImg.className = "card-image img-fluid";
