@@ -12,7 +12,7 @@ var displayDrinks = function(drinks){
     cardEl.className = "card m-3";
   
     var cardTitleEl = document.createElement("h5");
-    cardTitleEl.className = "card-title";
+    cardTitleEl.className = "card-title text-dark";
     cardTitleEl.textContent = drink.strDrink;
   
     var cardBodyEl = document.createElement('div');
@@ -39,11 +39,11 @@ var displayMeals = function(meals){
     cardEl.className = "card m-3";
   
     var cardTitleEl = document.createElement("h5");
-    cardTitleEl.className = "card-title";
+    cardTitleEl.className = "card-title text-dark";
     cardTitleEl.textContent = meal.strMeal;
   
     var cardBodyEl = document.createElement('div');
-    cardBodyEl.className = "card-body";
+    cardBodyEl.className = "card-body card-background";
   
     var cardImg = document.createElement("img");
     cardImg.className = "card-image img-fluid";
