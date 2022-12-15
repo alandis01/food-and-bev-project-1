@@ -10,7 +10,7 @@
 
 ## Description
 
-This application uses two server side API's to display meals and drinks that contain the chosen ingredient. User's selected ingredient is then added to local storage for future use. 
+This application uses two server side API's to display meals and drinks that contain the chosen ingredient. User's selected ingredient is then added to local storage and displayed on the screen. 
 
 ## Visuals
 ![Screenshot](/images/Screenshot%202022-12-14%20at%201.50.55%20PM.png)
