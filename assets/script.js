@@ -1,8 +1,8 @@
-var searchButtonEl = document.querySelector('#searchButton');
-var userSelectEl = document.querySelectorAll('.form-check-input');
+var searchButtonEl = document.querySelector("#searchButton");
+var userSelectEl = document.querySelectorAll(".form-check-input");
 var resultsEl = document.querySelector("#results");
-var foodResultsEl = document.querySelector('#foodResults');
-var renderLocalEl = document.querySelector('#renderLocal');
+var foodResultsEl = document.querySelector("#foodResults");
+var renderLocalEl = document.querySelector("#renderLocal");
 
 
 var displayDrinks = function(drinks){
@@ -17,7 +17,7 @@ resultsEl.innerHTML = null;
     cardTitleEl.className = "card-title text-dark";
     cardTitleEl.textContent = drink.strDrink;
 
-    var cardBodyEl = document.createElement('div');
+    var cardBodyEl = document.createElement("div");
     cardBodyEl.className = "card-body";
 
     var cardImg = document.createElement("img");
@@ -44,7 +44,7 @@ foodResultsEl.innerHTML = null;
     cardTitleEl.className = "card-title text-dark";
     cardTitleEl.textContent = meal.strMeal;
 
-    var cardBodyEl = document.createElement('div');
+    var cardBodyEl = document.createElement("div");
     cardBodyEl.className = "card-body";
 
     var cardImg = document.createElement("img");
@@ -93,7 +93,7 @@ function bevApi(q){
 }
 
 function renderLocal(){
-  renderLocalEl.textContent = 'Selected: ' + localStorage.getItem('user selection');
+  renderLocalEl.textContent = "Selected: " + localStorage.getItem("user selection");
 };
 
 var handleSearch = function (event){
@@ -116,8 +116,8 @@ var handleSearch = function (event){
       bevApi(q);
   }
 
-  localStorage.setItem('user selection', q);
+  localStorage.setItem("user selection", q);
   renderLocal();
 };
 
-searchButtonEl.addEventListener('click', handleSearch);
+searchButtonEl.addEventListener("click", handleSearch);
