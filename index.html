@@ -21,71 +21,76 @@
         </div>
         <section class="container p-3 d-flex justify-content-center fs-5" id="userSelect">
             <div class="container text-center">
-            <div class="row">
-                <div class="col">
-                    <div class="form-check form-check-inline">
+                <div class="row justify-content-center">
+                    <div class="form-check form-check-inline col-2">
                         <input class="form-check-input" type="radio" name="brandy" id="brandy" value="brandy">
                         <label class="form-check-label"><img src="./assets/images/brandy.png" height="25px" alt="brandy"> Brandy</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline col-2">
                         <input class="form-check-input" type="radio" name="ginger" id="ginger" value="ginger">
                         <label class="form-check-label"><img src="./assets/images/ginger.png" height="25px" alt="ginger"> Ginger</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline col-2">
                         <input class="form-check-input" type="radio" name="lemon" id="lemon" value="lemon">
                         <label class="form-check-label"><img src="./assets/images/lemon.png" height="25px" alt="lemon"> Lemon</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                </div>
+                <div class="row justify-content-center">
+                    <div class="form-check form-check-inline col-2">
                         <input class="form-check-input" type="radio" name="lime" id="lime" value="lime">
                         <label class="form-check-label"><img src="./assets/images/lime.png" height="25px" alt="lime"> Lime</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline col-2">
                         <input class="form-check-input" type="radio" name="milk" id="milk" value="milk">
                         <label class="form-check-label"><img src="./assets/images/milk.png" height="25px" alt="milk"> Milk</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                    <div class="form-check form-check-inline col-2">
                         <input class="form-check-input" type="radio" name="orange" id="orange" value="orange">
                         <label class="form-check-label"><img src="./assets/images/orange.png" height="25px" alt="orange"> Orange</label>
                     </div>
-                    <div class="form-check form-check-inline">
+                </div>
+                <div class="row justify-content-center">
+                    <div class="form-check form-check-inline col-2">
+                        <input class="form-check-input" type="radio" name="sugar" id="sugar" value="sugar">
+                        <label class="form-check-label"><img src="./assets/images/sugar.png" height="25px" alt="sugar"> Sugar</label>
+                    </div>
+                    <div class="form-check form-check-inline col-2">
+                        <input class="form-check-input" type="radio" name="cider" id="cider" value="cider">
+                        <label class="form-check-label"><img src="./assets/images/apple-cider-vinegar.png" height="25px" alt="cider"> Cider</label>
+                    </div>
+                    <div class="form-check form-check-inline col-2">
+                        <input class="form-check-input" type="radio" name="egg" id="egg" value="egg">
+                        <label class="form-check-label"><img src="./assets/images/fried-egg.png" height="25px" alt="egg"> Egg</label>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="form-check form-check-inline col-2">
+                        <input class="form-check-input" type="radio" name="sherry" id="sherry" value="sherry">
+                        <label class="form-check-label"><img src="./assets/images/wine-bottle.png" height="25px" alt="sherry"> Sherry</label>
+                    </div>
+                    <div class="form-check form-check-inline col-2">
                         <input class="form-check-input" type="radio" name="strawberries" id="strawberries"
                             value="strawberries">
                         <label class="form-check-label"><img src="./assets/images/strawberry.png" height="25px" alt="strawberries"> Strawberries</label>
                     </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="sugar" id="sugar" value="sugar">
-                        <label class="form-check-label"><img src="./assets/images/sugar.png" height="25px" alt="sugar"> Sugar</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="egg" id="egg" value="egg">
-                        <label class="form-check-label"><img src="./assets/images/fried-egg.png" height="25px" alt="egg"> Egg</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="sherry" id="sherry" value="sherry">
-                        <label class="form-check-label"><img src="./assets/images/wine-bottle.png" height="25px" alt="sherry"> Sherry</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="cider" id="cider" value="cider">
-                        <label class="form-check-label"><img src="./assets/images/apple-cider-vinegar.png" height="25px" alt="cider"> Cider</label>
-                    </div>
                 </div>
-            </div>
+                </div>
             </div>
         </section>
         <div class="p-3 d-flex justify-content-center">
             <button type="button" class="btn fs-5 m-2" style="background-color: rgb(244, 241, 222);" id="searchButton">Search</button>
         </div>
         <div id="renderLocal" class="m-3 d-flex justify-content-center fs-5"></div>
-
+            
         <div class="container px-4 text-center">
             <div class="row gx-5">
-                <div class="col-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <section class="p-3 border fs-4 fw-bold" style="background-color: rgb(82, 121, 111);">Food
                         <div id="foodResults">
                         </div>
                     </section>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-md-6 col-sm-12">
                     <section class="p-3 border fs-4 fw-bold" style="background-color: rgb(82, 121, 111);">Beverages
                         <div id="results"> </div>
                     </section>
@@ -93,7 +98,7 @@
             </div>
         </div>
     </main>
-    <footer>Icon made by Pixel perfect from www.flaticon.com</footer>
+    <footer class="d-flex justify-content-center fixed-bottom" style="background-color: rgb(82, 121, 111);">Icon made by Pixel perfect from www.flaticon.com || Application by Group 2</footer>
     <script src="./assets/script.js"></script>
 </body>
 
