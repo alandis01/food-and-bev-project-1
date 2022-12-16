@@ -105,6 +105,7 @@ var handleSearch = function (event){
       q = userSelectEl[i].value;
       userSelectEl[i].checked = false;
     }
+
     var selectedIngredient = document.createElement ("h4");
       selectedIngredient.className = "";
       selectedIngredient.textContent = q;
